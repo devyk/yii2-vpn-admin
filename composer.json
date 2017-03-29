@@ -1,30 +1,21 @@
 {
-    "name": "0xhexspeak/service-skeleton",
-    "description": "Microservice application template",
+    "name": "devyk/yii2-vpn-admin",
+    "description": "Example vpn administration panel implementation.",
     "type": "project",
     "license": "MIT",
     "minimum-stability": "stable",
     "keywords": [
         "yii2",
-        "application template",
-        "skeleton",
-        "microservice"
+        "administration panel",
+        "vpn"
     ],
     "authors": [
-        {
-            "name": "Denis Horobtsov",
-            "email": "denis@0xhexspeak.cf",
-            "role": "developer"
-        },
         {
             "name": "Yaroslav Khortiuk",
             "email": "yarik@0xhexspeak.cf",
             "role": "developer"
         }
     ],
-    "support": {
-        "email": "info@0xhexspeak.cf"
-    },
     "require": {
         "php": ">=5.5.0",
         "ext-intl": "*",
