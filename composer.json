@@ -1,0 +1,50 @@
+{
+    "name": "0xhexspeak/service-skeleton",
+    "description": "Microservice application template",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "keywords": [
+        "yii2",
+        "application template",
+        "skeleton",
+        "microservice"
+    ],
+    "authors": [
+        {
+            "name": "Denis Horobtsov",
+            "email": "denis@0xhexspeak.cf",
+            "role": "developer"
+        },
+        {
+            "name": "Yaroslav Khortiuk",
+            "email": "yarik@0xhexspeak.cf",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "email": "info@0xhexspeak.cf"
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "ext-intl": "*",
+        "yiisoft/yii2": "~2.0.6",
+        "yiisoft/yii2-bootstrap": "^2.0.0",
+        "yiisoft/yii2-authclient": "^2.0.0",
+        "trntv/cheatsheet": "^0.1@dev",
+        "vlucas/phpdotenv": "^2.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "^2.0.0",
+        "yiisoft/yii2-gii": "^2.0.0",
+        "yiisoft/yii2-faker": "^2.0.0",
+        "yiisoft/yii2-codeception": "^2.0.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "^0.3.1",
+        "codeception/specify": "^0.4.3",
+        "codeception/codeception": "^2.0"
+    },
+    "config": {
+        "process-timeout": 1800
+    }
+}
