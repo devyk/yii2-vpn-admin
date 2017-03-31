@@ -19,6 +19,6 @@ class CompanyRepository extends ActiveQuery
                 '>',
                 'total',
                 'companies.quota'
-            ])->all();
+            ])->orderBy('')->all();
     }
 }

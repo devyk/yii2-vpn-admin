@@ -23,7 +23,8 @@
         "yiisoft/yii2-bootstrap": "^2.0.0",
         "yiisoft/yii2-authclient": "^2.0.0",
         "trntv/cheatsheet": "^0.1@dev",
-        "vlucas/phpdotenv": "^2.0"
+        "vlucas/phpdotenv": "^2.0",
+        "fzaninotto/faker": "^1.6"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "^2.0.0",

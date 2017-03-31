@@ -13,6 +13,9 @@ class CompanyController extends BaseController
 
     public function actionReport($date)
     {
+        $faker = \Faker\Factory::create();
+        var_dump($faker->dateTimeBetween('-6 month', 'now')->format('Y-m-d'));
+        die;
         return ReportResource::find()->findAb($date);
     }
 }

@@ -3,6 +3,7 @@
 namespace api\modules\api\v1\controllers;
 
 use Yii;
+use yii\filters\Cors;
 use yii\web\Response;
 use yii\rest\ActiveController;
 use yii\filters\VerbFilter;
@@ -16,6 +17,22 @@ class BaseController extends ActiveController
     public function behaviors()
     {
         return [
+            'corsFilter' => [
+                'class' => Cors::className(),
+                'cors'  => [
+                    'Origin' => ['*'],
+                    'Access-Control-Request-Method' => ['GET', 'POST', 'PUT', 'DELETE', 'HEAD', 'OPTIONS'],
+                    'Access-Control-Request-Headers' => ['*'],
+                    'Access-Control-Allow-Credentials' => null,
+                    'Access-Control-Max-Age' => 86400,
+                    'Access-Control-Expose-Headers' => [
+                        'X-Pagination-Current-Page',
+                        'X-Pagination-Page-Count',
+                        'X-Pagination-Per-Page',
+                        'X-Pagination-Total-Count'
+                    ],
+                ]
+            ],
             'contentNegotiator' => [
                 'class' => ContentNegotiator::className(),
                 'formats' => [
@@ -28,16 +45,6 @@ class BaseController extends ActiveController
                 'actions' => $this->verbs(),
             ]
         ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function init()
-    {
-        Yii::$app->response->headers->add('Access-Control-Allow-Origin', '*');
-        Yii::$app->response->headers->add('Access-Control-Allow-Headers', 'Accept, Authorization');
-        parent::init();
     }
 
     /**
