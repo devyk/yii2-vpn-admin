@@ -29,7 +29,7 @@ class Company extends ActiveRecord
     public function rules()
     {
         return [
-            ['name', 'string'],
+            ['name', 'string', 'length' => [3, 255]],
             ['quota', 'integer']
         ];
     }

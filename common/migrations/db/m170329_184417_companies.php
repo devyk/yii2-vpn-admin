@@ -11,8 +11,10 @@ class m170329_184417_companies extends Migration
         $this->createTable(self::$tableName, [
             'id' => $this->primaryKey(),
             'name' => $this->string(255),
-            'quota' => $this->integer()->unsigned()
+            'quota' => $this->bigInteger()->unsigned()
         ]);
+
+        $this->createIndex('idx_quota', self::$tableName, 'quota');
     }
 
     public function down()

@@ -2,6 +2,7 @@
 
 namespace api\modules\api\v1\models;
 
+use api\modules\api\v1\repositories\UserRepository;
 use yii\db\ActiveRecord;
 
 class User extends ActiveRecord
@@ -15,13 +16,21 @@ class User extends ActiveRecord
     }
 
     /**
+     * @return UserRepository
+     */
+    public static function find()
+    {
+        return new UserRepository(get_called_class());
+    }
+
+    /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
             [['name', 'email', 'company_id'], 'required'],
-            ['name', 'string'],
+            ['name', 'string', 'length' => [3, 255]],
             ['email', 'email'],
             [
                 'company_id',

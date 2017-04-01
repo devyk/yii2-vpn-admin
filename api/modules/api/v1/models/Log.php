@@ -16,6 +16,14 @@ class Log extends ActiveRecord
     }
 
     /**
+     * @return LogRepository
+     */
+    public static function find()
+    {
+        return new LogRepository(get_called_class());
+    }
+
+    /**
      * @inheritdoc
      */
     public function rules()

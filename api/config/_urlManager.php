@@ -14,6 +14,8 @@ return [
             'controller' => 'api/v1/company',
             'extraPatterns' => [
                 'GET report/<date>' => 'report',
+                'POST generate' => 'generate',
+                'OPTIONS <opts:(.*)>' => 'options',
             ],
         ]
     ]

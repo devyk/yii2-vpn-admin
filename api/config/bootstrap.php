@@ -1,6 +1,6 @@
 <?php
 // Di container
 \Yii::$container->set(
-    'api\modules\api\v1\services\InstanceInterface',
-    'api\modules\api\v1\services\Instance'
+    'api\modules\api\v1\services\CompanyInterface',
+    'api\modules\api\v1\services\Company'
 );
