@@ -21,14 +21,13 @@ class Company implements CompanyInterface
          */
         foreach ($userRepository->findAllIds() as $userId) {
             $data = [];
-            /**
-             * Guarantee that the user transfers counter in 6-month period always be in range of 54-498,
-             * As a given task do not force us about precise of each month.
-             */
-            $transfersCount = $faker->numberBetween(9, 83);
-
-            for ($j=0; $j < $transfersCount; $j++) {
-                for ($i=0; $i < 6; $i++) {
+            for ($i=0; $i < 6; $i++) {
+                /**
+                 * Guarantee that the user transfers counter in 6-month period always be in range of 54-498,
+                 * As a given task do not force us about precise of each month.
+                 */
+                $transfersCount = $faker->numberBetween(9, 83);
+                for ($j=0; $j < $transfersCount; $j++) {
                     $data[] = [
                         $userId['id'],
                         $faker->dateTimeBetween("-{1+$i} month", "-$i month")->format('Y-m-d H:i:s'),

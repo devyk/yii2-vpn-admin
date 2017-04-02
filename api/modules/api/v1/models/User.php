@@ -30,6 +30,7 @@ class User extends ActiveRecord
     {
         return [
             [['name', 'email', 'company_id'], 'required'],
+            [['name', 'email'], 'trim'],
             ['name', 'string', 'length' => [3, 255]],
             ['email', 'email'],
             [

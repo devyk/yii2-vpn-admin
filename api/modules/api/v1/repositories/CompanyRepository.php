@@ -21,11 +21,7 @@ class CompanyRepository extends ActiveQuery
             $date->format('Y-m-t')
         ])
         ->groupBy('companies.id')
-        ->having([
-            '>',
-            'total',
-            'companies.quota'
-        ])
+        ->having('total > companies.quota')
         ->orderBy(['companies.quota' => SORT_DESC])
         ->all();
     }

@@ -30,6 +30,7 @@ class Company extends ActiveRecord
     {
         return [
             ['name', 'string', 'length' => [3, 255]],
+            ['name', 'trim'],
             ['quota', 'integer']
         ];
     }
