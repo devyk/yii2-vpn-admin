@@ -1,25 +1,14 @@
-# service-skeleton
-Microservice skeleton based on yii2 framework.
+# Yii2 Fake Vpn Admin
 
----
-# Docker installation
-**Before installation**
+**How to run?**
 
-1. Read about [docker] (https://docker.com). You should be familiar with basic concepts before starting.
+1. Run in shell ```docker/start.sh```
+2. Run migrations ```docker-compose run app console/yii migrate  --interactive=0```
 
-# Installation
-1. Follow [docker install] (https://docs.docker.com/engine/installation/) instruction
-2. Install composer globally (https://getcomposer.org/download/)
-3. Run the following command from the project root `docker/start.sh`
+API will be available at localhost:8201 by default.
 
-# Docker FAQ
-**How do i run yii console command?**
+**How to run tests?**
 
-1. `docker-compose exec app console/yii help`
-2. `docker-compose exec app console/yii migrate`
-3. `docker-compose exec app console/yii migrate/down`
-etc.
+```docker-compose run app tests/unit.sh```
 
-**How to connect to the application database with my workbench?**
 
-MySQL is available on `localhost`, port `33061`. User - `api_dbu`, password - `api_pass`.
